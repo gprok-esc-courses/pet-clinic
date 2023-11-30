@@ -1,0 +1,8 @@
+username,password,role,active
+mike,1111,manager,1
+john,1111,veterinary,1
+pat,1111,veterinary,1
+tom,1111,veterinary,0
+sue,1111,secretary,1
+owen,1111,secretary,1
+rod,1111,secretary,1
