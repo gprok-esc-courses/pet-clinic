@@ -1,30 +1,5 @@
-import csv
-
-def get_users():
-    file = open("staff.csv")
-    reader = csv.DictReader(file)
-    users = {}
-    for row in reader:
-        users[row['username']] = row 
-    return users 
-
-def get_pets():
-    file = open("pets.csv")
-    reader = csv.DictReader(file)
-    pets = {}
-    for row in reader:
-        pets[row['id']] = row 
-    return pets 
-
-def add_pet():
-    name = input("Give name: ")
-    species = input("Give Species: ")
-    breed = input("Give breed: ")
-    year = input("Give birth year: ")
-    pets = get_pets()
-    new_id = len(pets) + 1
-    file = open('pets.csv', 'a')
-    file.write(str(new_id)+','+name+','+species+','+breed+','+year+'\n')
+from files import get_users
+from secretary import add_pet
 
 
 def login():
