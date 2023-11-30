@@ -8,6 +8,24 @@ def get_users():
         users[row['username']] = row 
     return users 
 
+def get_pets():
+    file = open("pets.csv")
+    reader = csv.DictReader(file)
+    pets = {}
+    for row in reader:
+        pets[row['id']] = row 
+    return pets 
+
+def add_pet():
+    name = input("Give name: ")
+    species = input("Give Species: ")
+    breed = input("Give breed: ")
+    year = input("Give birth year: ")
+    pets = get_pets()
+    new_id = len(pets) + 1
+    file = open('pets.csv', 'a')
+    file.write(str(new_id)+','+name+','+species+','+breed+','+year+'\n')
+
 
 def login():
     username = input("Username: ")
@@ -54,10 +72,42 @@ username, role = login()
 while True:
     if role == 'secretary':
         choice = secretary_menu()
+        if choice == 1:
+            add_pet()
+        elif choice == 2:
+            pass
+        elif choice == 0:
+            break
+        else:
+            print("Wrong choice")
     elif role == 'veterinary':
         choice = veterinary_menu()
+        choice = secretary_menu()
+        if choice == 1:
+            pass
+        elif choice == 2:
+            pass
+        elif choice == 0:
+            break
+        else:
+            print("Wrong choice")
     elif role == 'manager':
         choice = manager_menu()
+        choice = secretary_menu()
+        if choice == 1:
+            pass
+        elif choice == 2:
+            pass
+        elif choice == 3:
+            pass
+        elif choice == 4:
+            pass
+        elif choice == 5:
+            pass
+        elif choice == 0:
+            break
+        else:
+            print("Wrong choice")
     else:
         print("Invalid role")
         break
