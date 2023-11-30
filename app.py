@@ -57,7 +57,6 @@ while True:
             print("Wrong choice")
     elif role == 'veterinary':
         choice = veterinary_menu()
-        choice = secretary_menu()
         if choice == 1:
             pass
         elif choice == 2:
@@ -68,7 +67,6 @@ while True:
             print("Wrong choice")
     elif role == 'manager':
         choice = manager_menu()
-        choice = secretary_menu()
         if choice == 1:
             pass
         elif choice == 2:
