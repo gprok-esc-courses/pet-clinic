@@ -1,0 +1,4 @@
+id,pet_id,date,time,reason,completed,result
+1,3,2023-12-06,10:00,Checkup,1,Everything ok
+2,2,2023-12-21,12:30,Vaccination,0,-
+3,2,2024-01-17,13:00,Checkup,0,-

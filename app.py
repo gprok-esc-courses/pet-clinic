@@ -1,5 +1,5 @@
 from files import get_users
-from secretary import add_pet
+from secretary import add_pet, add_appointment
 
 
 def login():
@@ -50,7 +50,7 @@ while True:
         if choice == 1:
             add_pet()
         elif choice == 2:
-            pass
+            add_appointment()
         elif choice == 0:
             break
         else:
