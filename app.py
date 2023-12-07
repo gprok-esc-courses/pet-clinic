@@ -1,5 +1,7 @@
 from files import get_users
 from secretary import add_pet, add_appointment
+from veterinary import print_open_appointments, add_result
+from manager import export_pet, day_treatments
 
 
 def login():
@@ -58,9 +60,9 @@ while True:
     elif role == 'veterinary':
         choice = veterinary_menu()
         if choice == 1:
-            pass
+            print_open_appointments()
         elif choice == 2:
-            pass
+            add_result()
         elif choice == 0:
             break
         else:
@@ -68,9 +70,9 @@ while True:
     elif role == 'manager':
         choice = manager_menu()
         if choice == 1:
-            pass
+            export_pet()
         elif choice == 2:
-            pass
+            day_treatments()
         elif choice == 3:
             pass
         elif choice == 4:

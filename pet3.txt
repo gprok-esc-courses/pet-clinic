@@ -1,0 +1,8 @@
+PET REPORT
+Name: Garfield
+Specie: Cat
+Breed: Stray
+Year: 2021
+=================================
+TREATMENTS
+2023-12-06, Checkup, Needs treatment for flu

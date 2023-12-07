@@ -48,3 +48,11 @@ def get_pet_by_id(pid):
             return row 
     file.close()
     return None
+
+def get_appointment_by_id(aid):
+    file = open("appointments.csv")
+    reader = csv.DictReader(file)
+    for row in reader:
+        if row['id'] == aid:
+            return row
+    return None
